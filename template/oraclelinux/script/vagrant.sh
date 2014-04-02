@@ -3,7 +3,7 @@
 # Vagrant specific
 date > /etc/vagrant_box_build_time
 
-VAGRANT_USER=vagrant
+VAGRANT_USER=ariba
 VAGRANT_HOME=/home/$VAGRANT_USER
 VAGRANT_KEY_URL=https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub
 

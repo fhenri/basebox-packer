@@ -19,6 +19,10 @@ if [ $PROVISIONER == 'chef' ]; then
     echo "Installing Chef version $PROVISIONER_VERSION"
     sh <(curl -L https://www.opscode.com/chef/install.sh) -v $PROVISIONER_VERSION
   fi
+elif [ $PROVISIONER == 'puppet' ]; then
+  echo "Installing Puppet"
+  rpm -ivh http://yum.puppetlabs.com/el/6/products/i386/puppetlabs-release-6-7.noarch.rpm
+  yum install -y puppet
 else
   echo "Building a box without a provisioner"
 fi
